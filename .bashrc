@@ -1,7 +1,8 @@
 export PATH=$PATH:/share/es-ops/scripts:/usr/local/bin:/usr/sbin:/usr/ccs/bin:/usr/bin:/usr/sfw/bin
 export PATH=$PATH:/usr/X/bin:/usr/X11/bin
-export PATH=$PATH:~/myutools
+export PATH=$PATH:~/myutools:/share/soft/bin/
 export WS=/export/ws/homer/mao/
+export KERNELSRC=/export/ws/homer/mao/linux_3.1.4
 
 # alias setup
 ##########################################

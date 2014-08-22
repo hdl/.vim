@@ -2,10 +2,9 @@ export PATH=$PATH:/share/es-ops/scripts:/usr/local/bin:/usr/sbin:/usr/ccs/bin:/u
 export PATH=$PATH:/usr/X/bin:/usr/X11/bin
 export PATH=$PATH:~/myutools:/share/soft/bin/
 export WS=/export/ws/homer/mao/
-export KERNELSRC=/export/ws/homer/mao/linux_3.1.4
-
 # alias setup
 ##########################################
+alias ls='ls --color'
 alias la='ls -all'
 alias gv='gvim'
 alias nunki='ssh zemao@nunki.usc.edu'
@@ -15,6 +14,8 @@ alias connex='cd /share/es-ops/scripts/CONNEX/SourceFiles'
 alias 3par='ssh maoze@3par-serv1.3pardata.com'
 alias simpsons='ssh maoze@simpsons.3pardata.com'
 alias flanders='ssh maoze@flanders.3pardata.com'
+alias console2='ssh maoze@console2.3pardata.com'
+alias pa='ssh maoze@pa-console1.usa.hp.com'
 alias hp='cd /export/ws/homer/mao/swiss_3.1.4/tpdsrc'
 alias cs='cscope'
 alias gdn="git diff --no-ext-diff"

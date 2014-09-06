@@ -46,7 +46,7 @@ filetype plugin on
 syntax enable
 syntax on
 set number "line number
-set mouse=a
+set mouse=v
 
 "taglist
 nnoremap <silent> TL :TlistToggle<CR><CR>

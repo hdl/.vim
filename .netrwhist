@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/export/ws/homer/mao/swiss_3.1.4_pbo/tpdsrc/tools/kernelpatch'
-let g:netrw_dirhist_2='/export/ws/homer/mao/swiss_3.1.4_pbo/tpdsrc/kmod/cluster/test'
-let g:netrw_dirhist_3='/home/usr/maoze/.config'

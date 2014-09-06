@@ -7,6 +7,7 @@ export PATH=$PATH:/opt/yobuild/bin/
 ##########################################
 alias ls='ls -G'
 alias gv='gvim'
+alias opendir='nautilus'
 alias nunki='ssh -X zemao@nunki.usc.edu'
 alias aludra='ssh -X zemao@aludra.usc.edu'
 alias scripts='cd /share/es-ops/scripts'

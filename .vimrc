@@ -47,6 +47,7 @@ syntax enable
 syntax on
 set number "line number
 set mouse=v
+set guifont=Monaco:h14
 
 "taglist
 nnoremap <silent> TL :TlistToggle<CR><CR>

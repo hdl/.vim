@@ -2,13 +2,13 @@ export PATH=$PATH:/share/es-ops/scripts:/usr/local/bin:/usr/sbin:/usr/ccs/bin:/u
 export PATH=$PATH:/usr/X/bin:/usr/X11/bin
 export PATH=$PATH:~/myutools:/share/soft/bin/
 export WS=/export/ws/homer/mao/
+export PATH=$PATH:/opt/yobuild/bin/
 # alias setup
 ##########################################
-alias ls='ls --color'
-alias la='ls -all'
+alias ls='ls -G'
 alias gv='gvim'
-alias nunki='ssh zemao@nunki.usc.edu'
-alias aludra='ssh zemao@aludra.usc.edu'
+alias nunki='ssh -X zemao@nunki.usc.edu'
+alias aludra='ssh -X zemao@aludra.usc.edu'
 alias scripts='cd /share/es-ops/scripts'
 alias connex='cd /share/es-ops/scripts/CONNEX/SourceFiles'
 alias 3par='ssh maoze@3par-serv1.3pardata.com'

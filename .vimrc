@@ -1,3 +1,28 @@
+set nocompatible
+filetype off                    " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+"my Bundle here:
+"
+" original repos on github
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'klen/python-mode'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdcommenter'
+"..................................
+" vim-scripts repos
+Bundle 'taglist.vim'
+Bundle 'hougo/neocomplcache.vim'
+"..................................
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+"......................................
+filetype plugin indent on
+
+
 "-------------------------------------------------------
 "general configuration
 "------------------------------------------------------
@@ -15,14 +40,8 @@ syntax on
 set number "line number
 set mouse=a
 
-"plugin management
-execute pathogen#infect()
-"key mapping
-"delete space in trail
-nnoremap <silent> <F7> :%s/\s*$//ge<CR><CR> 
-
 "taglist
-nnoremap <silent> <F8> :TlistToggle<CR><CR>
+nnoremap <silent> TL :TlistToggle<CR><CR>
 let Tlist_Show_One_File=0
 let Tlist_Exit_OnlyWindow=1                  
 let Tlist_Use_Right_Window=0                 
@@ -61,4 +80,7 @@ let g:neocomplcache_enable_at_startup = 1
 
 "powerline
 set laststatus=2
-set encoding=utf-8
+set encoding=utf-8 
+
+
+

@@ -89,6 +89,6 @@ let g:neocomplcache_enable_at_startup = 1
 "powerline
 set laststatus=2
 set encoding=utf-8 
-
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 

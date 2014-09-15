@@ -1,10 +1,11 @@
 export PATH=$PATH:/share/es-ops/scripts:/usr/local/bin:/usr/sbin:/usr/ccs/bin:/usr/bin:/usr/sfw/bin
-export PATH=$PATH:/usr/X/bin:/usr/X11/bin
+export PATH=$PATH:/usr/X/bin:/usr/X11/bin:/usr/local/bin
 export PATH=$PATH:~/myutools:/share/soft/bin/
 export WS=/export/ws/homer/mao/
 export PATH=$PATH:/opt/yobuild/bin/
 # alias setup
 ##########################################
+alias aws1='ssh ubuntu@ec2-54-68-132-178.us-west-2.compute.amazonaws.com -i ~/.ssh/awskey1.pem'
 alias ls='ls -G'
 alias gv='gvim'
 alias opendir='nautilus'

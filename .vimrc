@@ -15,7 +15,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
 Plugin 'Shougo/neocomplcache.vim'
-
+Plugin 'Mark'
+Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
@@ -36,6 +36,8 @@ filetype plugin indent on    " required
 "general configuration
 "------------------------------------------------------
 set nocompatible
+set ts=4
+set sw=4
 "set list
 "set lcs=tab:\|\ ,nbsp:%,trail:-
 set backspace=indent,eol,start "help bs
@@ -47,7 +49,7 @@ filetype plugin on
 syntax enable
 syntax on
 set number "line number
-set mouse=v
+set mouse=a
 set guifont=Monaco:h14
 
 "taglist

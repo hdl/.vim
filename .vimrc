@@ -15,8 +15,9 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
 Plugin 'Shougo/neocomplcache.vim'
-Plugin 'Mark'
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'Mark'
+" Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,10 +37,15 @@ filetype plugin indent on    " required
 "general configuration
 "------------------------------------------------------
 set nocompatible
-set ts=4
-set sw=4
+" set ts=4
+" set sw=4
 "set list
 "set lcs=tab:\|\ ,nbsp:%,trail:-
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 set backspace=indent,eol,start "help bs
 set ww=b,s,h,l,<,>,[,]  "help ww
 set hlsearch
@@ -62,25 +68,25 @@ let Tlist_File_Fold_Auto_Close=1
 "cscope
 cs add cscope.out
 if has("cscope")
-    set csto=0
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-       " else add database pointed to by environment
-    elseif $CSCOPE_DB!=""
-       cs add $CSCOPE_DB
-    endif
-    set csverb
-    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+	set csto=0
+	set cst
+	set nocsverb
+	" add any database in current directory
+	if filereadable("cscope.out")
+		cs add cscope.out
+		" else add database pointed to by environment
+	elseif $CSCOPE_DB!=""
+		cs add $CSCOPE_DB
+	endif
+	set csverb
+	nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 endif
 "nerd_commenter
@@ -95,4 +101,18 @@ set laststatus=2
 set encoding=utf-8 
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
+"minbuf
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1
 
+
+" Override go-to.definition key shortcut to Ctrl-]
+" let g:pymode_rope_goto_definition_bind = "<C-]>"
+"
+" " Override run current python file key shortcut to Ctrl-Shift-e
+" let g:pymode_run_bind = "<C-S-e>"
+"
+" " Override view python doc key shortcut to Ctrl-Shift-d
+" let g:pymode_doc_bind = "<C-S-d>"

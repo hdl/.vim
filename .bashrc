@@ -3,12 +3,23 @@ export PATH=$PATH:/usr/X/bin:/usr/X11/bin:/usr/local/bin
 export PATH=$PATH:~/myutools:/share/soft/bin/
 export WS=/export/ws/homer/mao/
 export PATH=$PATH:/opt/yobuild/bin/
+export AWS_ACCESS_KEY=AKIAJYC6IIFVMB4WXPIA
+export AWS_SECRET_KEY=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
+export JAVA_HOME=$(/usr/libexec/java_home)
+export EC2_HOME=/usr/local/ec2/ec2-api-tools
+export PATH=$PATH:$EC2_HOME/bin
 # alias setup
 ##########################################
-alias aws1='ssh ubuntu@ec2-54-68-132-178.us-west-2.compute.amazonaws.com -i ~/.ssh/awskey1.pem'
+alias awsvpn='ssh ubuntu@awsvpn -i ~/.ssh/awskey1.pem'
+alias aws1='ssh ec2-user@aws1 -i ~/.ssh/awskey1.pem'
+alias aws2='ssh ubuntu@aws2 -i ~/.ssh/awskey1.pem'
+alias aws3='ssh ubuntu@aws3 -i ~/.ssh/awskey1.pem'
+alias aws4='ssh ubuntu@aws4 -i ~/.ssh/awskey1.pem'
+alias aws32='ssh ubuntu@aws32 -i ~/.ssh/awskey1.pem'
 alias ls='ls -G'
 alias gv='gvim'
 alias opendir='nautilus'
+alias ever='ssh -X EE653-user3@128.125.20.242'
 alias nunki='ssh -X zemao@nunki.usc.edu'
 alias aludra='ssh -X zemao@aludra.usc.edu'
 alias scripts='cd /share/es-ops/scripts'
@@ -19,6 +30,8 @@ alias flanders='ssh maoze@flanders.3pardata.com'
 alias console2='ssh maoze@console2.3pardata.com'
 alias pa='ssh maoze@pa-console1.usa.hp.com'
 alias hp='cd /export/ws/homer/mao/swiss_3.1.4/tpdsrc'
+alias AI='cd ~/AI/hw3'
+alias htdoc='cd /Applications/XAMPP/htdocs'
 alias cs='cscope'
 alias gdn="git diff --no-ext-diff"
 if [ "$PS1" ]; then

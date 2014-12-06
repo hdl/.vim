@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/mao/template'
+let g:netrw_dirhist_2='/Users/mao/AI/hw3/test'
+let g:netrw_dirhist_3='/Users/mao/cs402/kernel_3/kernel/fs/ramfs'
+let g:netrw_dirhist_4='/Users/mao/cs402/kernel_3/kernel/fs'

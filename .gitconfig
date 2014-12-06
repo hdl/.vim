@@ -3,15 +3,21 @@
 	name = mac_vbox
 
 [alias]
-  df = !git diff --no-prefix && git diff --staged --no-prefix
-  st = status
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  co = checkout
-  con = checkout -b
-  ci = commit
-  br = branch
-  ls =  branch -a
+	df = !git diff --no-prefix && git diff --staged --no-prefix
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	con = checkout -b
+	ci = commit
+	br = branch
+	ls =  branch -a
+	d = difftool
 [mergetool]
+	tool = vimdiff
 
+[diff]
+	tool = vimdiff
 [push]
-        default = upstream
+	default = upstream
+[difftool]
+	prompt = false

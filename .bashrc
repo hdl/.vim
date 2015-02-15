@@ -6,6 +6,7 @@ export PATH=$PATH:/opt/yobuild/bin/
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools
 export PATH=$PATH:$EC2_HOME/bin
+export PATH=$PATH:$/Users/mao/mongodb/bin
 # alias setup
 ##########################################
 alias awsvpn='ssh ubuntu@awsvpn -i ~/.ssh/awskey1.pem'

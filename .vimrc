@@ -116,3 +116,14 @@ let g:miniBufExplModSelTarget = 1
 "
 " " Override view python doc key shortcut to Ctrl-Shift-d
 " let g:pymode_doc_bind = "<C-S-d>"
+
+
+fun! ShowFuncName()
+   let lnum = line(".")
+   let col = col(".")
+   echohl ModeMsg
+   echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
+   echohl None
+   call search("\\%" . lnum . "l" . "\\%" . col . "c")
+endfun
+map ,f :call ShowFuncName() <CR>

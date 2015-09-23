@@ -131,3 +131,15 @@ map ,f :call ShowFuncName() <CR>
 
 "Use Mark plugin to highlight selected word  
 map <2-leftmouse> \m 
+
+fun! EnableCopy()
+   set nonu
+   set mouse=
+endfun
+
+fun! DisableCopy()
+   set number
+   set mouse=a
+endfun
+map ,, :call EnableCopy() <CR>
+map ,. :call DisableCopy() <CR>

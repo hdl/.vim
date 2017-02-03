@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'tpope/vim-fugitive'
 " Plugin 'Mark'
 " Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line

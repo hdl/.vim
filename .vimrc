@@ -52,7 +52,7 @@ set ww=b,s,h,l,<,>,[,]  "help ww
 set hlsearch
 set showmatch       " auto match ()
 filetype on "detect file type
-filetype plugin on 
+filetype plugin on
 syntax enable
 syntax on
 set number "line number
@@ -62,9 +62,9 @@ set guifont=Monaco:h14
 "taglist
 nnoremap <silent> TL :TlistToggle<CR><CR>
 let Tlist_Show_One_File=0
-let Tlist_Exit_OnlyWindow=1                  
-let Tlist_Use_Right_Window=0                 
-let Tlist_File_Fold_Auto_Close=1 
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window=0
+let Tlist_File_Fold_Auto_Close=1
 
 "cscope
 cs add cscope.out
@@ -99,13 +99,13 @@ let g:neocomplcache_enable_at_startup = 1
 
 "powerline
 set laststatus=2
-set encoding=utf-8 
+set encoding=utf-8
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 "minbuf
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 
@@ -117,3 +117,34 @@ let g:miniBufExplModSelTarget = 1
 "
 " " Override view python doc key shortcut to Ctrl-Shift-d
 " let g:pymode_doc_bind = "<C-S-d>"
+
+fun! ShowFuncName()
+   let lnum = line(".")
+   let col = col(".")
+   echohl ModeMsg
+   echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
+   echohl None
+   call search("\\%" . lnum . "l" . "\\%" . col . "c")
+endfun
+map ,f :call ShowFuncName() <CR>
+
+"Use Mark plugin to highlight selected word
+map <2-leftmouse> \m
+
+fun! EnableCopy()
+   set nonu
+   set mouse=
+endfun
+
+fun! DisableCopy()
+   set number
+   set mouse=a
+endfun
+map ,, :call EnableCopy() <CR>
+map ,. :call DisableCopy() <CR>
+set pastetoggle=<F10>
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+" colors
+" colorscheme gurunew

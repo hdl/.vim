@@ -9,6 +9,7 @@ export PATH=$PATH:$EC2_HOME/bin
 export PATH=$PATH:$/Users/mao/mongodb/bin
 # alias setup
 ##########################################
+alias linode='ssh root@45.79.75.39'
 alias awsvpn='ssh ubuntu@awsvpn -i ~/.ssh/awskey1.pem'
 alias aws1='ssh ec2-user@aws1 -i ~/.ssh/awskey1.pem'
 alias aws2='ssh ubuntu@aws2 -i ~/.ssh/awskey1.pem'
@@ -27,6 +28,7 @@ alias 3par='ssh maoze@3par-serv1.3pardata.com'
 alias simpsons='ssh maoze@simpsons.3pardata.com'
 alias flanders='ssh maoze@flanders.3pardata.com'
 alias console2='ssh maoze@console2.3pardata.com'
+alias side='ssh -X maoz@sideshow.3pardata.com'
 alias pa='ssh maoze@pa-console1.usa.hp.com'
 alias hp='cd /export/ws/homer/mao/swiss_3.1.4/tpdsrc'
 alias AI='cd ~/AI/hw3'

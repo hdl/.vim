@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Plugin 'jiangmiao/auto-pairs'
 " Plugin 'klen/python-mode'
+Plugin 'dimasg/vim-mark'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'taglist.vim'
@@ -129,7 +130,7 @@ endfun
 map ,f :call ShowFuncName() <CR>
 
 "Use Mark plugin to highlight selected word
-map <2-leftmouse> \m
+map <3-leftmouse> \m
 
 fun! EnableCopy()
    set nonu
